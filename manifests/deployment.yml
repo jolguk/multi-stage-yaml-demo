@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: jolgukmultistageyamldemo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jolgukmultistageyamldemo 
+    spec:
+      containers:
+        - name: jolgukmultistageyamldemo 
+          image: azuremldacrgdhkfcik.azurecr.io/jolgukmultistageyamldemo 
+          ports:
+          - containerPort: 8080
